@@ -47,7 +47,7 @@
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> selectCols",
-				"selectCols filter(ERROR_FUNCTION('')) ~> filterRows"
+				"selectCols filter(customer_id != 12) ~> filterRows"
 			]
 		}
 	}
