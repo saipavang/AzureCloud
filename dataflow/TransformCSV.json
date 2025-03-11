@@ -16,6 +16,9 @@
 			"transformations": [
 				{
 					"name": "selectCols"
+				},
+				{
+					"name": "filterRows"
 				}
 			],
 			"scriptLines": [
@@ -40,14 +43,11 @@
 				"          product_id,",
 				"          customer_id,",
 				"          payment,",
-				"          credit_card,",
-				"          loyalty_card,",
-				"          cost,",
-				"          quantity,",
 				"          price",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> selectCols"
+				"     skipDuplicateMapOutputs: true) ~> selectCols",
+				"selectCols filter(ERROR_FUNCTION('')) ~> filterRows"
 			]
 		}
 	}
