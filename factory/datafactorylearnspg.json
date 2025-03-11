@@ -1,6 +1,12 @@
 {
 	"name": "datafactorylearnspg",
 	"properties": {
+		"globalParameters": {
+			"file_param": {
+				"type": "string",
+				"value": "s"
+			}
+		},
 		"globalConfigurations": {
 			"PipelineBillingEnabled": "false",
 			"factoryStagingLSReferenceName": "datalakestoragefactory",
