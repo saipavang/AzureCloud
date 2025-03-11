@@ -33,6 +33,11 @@
 				}
 			}
 		],
+		"variables": {
+			"var_files": {
+				"type": "Array"
+			}
+		},
 		"annotations": []
 	}
 }
