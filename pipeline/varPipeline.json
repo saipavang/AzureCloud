@@ -33,7 +33,7 @@
 				}
 			},
 			{
-				"name": "Set variable1",
+				"name": "StoreFiles",
 				"type": "SetVariable",
 				"dependsOn": [
 					{
