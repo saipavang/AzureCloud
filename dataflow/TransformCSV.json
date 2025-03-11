@@ -36,6 +36,9 @@
 				},
 				{
 					"name": "aggregate"
+				},
+				{
+					"name": "alterRow"
 				}
 			],
 			"scriptLines": [
@@ -71,7 +74,8 @@
 				"split1@amex derive(payment = coalesce(payment,'N/A')) ~> derivedColumn",
 				"split1@visa aggregate(groupBy(customer_id),",
 				"     product_id = max(product_id)) ~> aggregate",
-				"aggregate sink(allowSchemaDrift: true,",
+				"aggregate alterRow(insertIf(1==1)) ~> alterRow",
+				"alterRow sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     umask: 0022,",
 				"     preCommands: [],",
