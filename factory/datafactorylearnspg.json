@@ -1,0 +1,9 @@
+{
+	"name": "datafactorylearnspg",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f7c6e46b-7173-485a-bf7e-a95afee981a8",
+		"tenantId": "c7b042e1-b43c-4567-8431-76b49cd00842"
+	}
+}
