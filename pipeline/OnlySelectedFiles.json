@@ -32,7 +32,7 @@
 				}
 			},
 			{
-				"name": "ForEach1",
+				"name": "ForEachCSV",
 				"type": "ForEach",
 				"dependsOn": [
 					{
@@ -48,7 +48,15 @@
 						"value": "@activity('Get Metadata').output.childItems",
 						"type": "Expression"
 					},
-					"isSequential": true
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "IfFileMatches",
+							"type": "IfCondition",
+							"dependsOn": [],
+							"userProperties": []
+						}
+					]
 				}
 			}
 		],
