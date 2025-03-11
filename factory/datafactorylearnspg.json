@@ -1,5 +1,10 @@
 {
 	"name": "datafactorylearnspg",
+	"properties": {
+		"globalConfigurations": {
+			"PipelineBillingEnabled": "true"
+		}
+	},
 	"location": "southindia",
 	"identity": {
 		"type": "SystemAssigned",
