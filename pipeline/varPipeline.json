@@ -50,9 +50,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "var_files",
-					"value": [
-						""
-					]
+					"value": {
+						"value": "@activity('Get Metadata').output.childItems",
+						"type": "Expression"
+					}
 				}
 			}
 		],
