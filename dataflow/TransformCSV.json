@@ -15,7 +15,19 @@
 			"sinks": [],
 			"transformations": [],
 			"scriptLines": [
-				"source(allowSchemaDrift: true,",
+				"source(output(",
+				"          transaction_id as short,",
+				"          transactional_date as timestamp,",
+				"          product_id as string,",
+				"          customer_id as short,",
+				"          payment as string,",
+				"          credit_card as long,",
+				"          loyalty_card as boolean,",
+				"          cost as double,",
+				"          quantity as short,",
+				"          price as double",
+				"     ),",
+				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1"
 			]
