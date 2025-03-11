@@ -22,6 +22,9 @@
 				},
 				{
 					"name": "split1"
+				},
+				{
+					"name": "derivedColumn"
 				}
 			],
 			"scriptLines": [
@@ -53,7 +56,8 @@
 				"selectCols filter(customer_id != 12) ~> filterRows",
 				"filterRows split(payment == 'visa',",
 				"     payment == 'mastercard',",
-				"     disjoint: false) ~> split1@(visa, mastercard, amex)"
+				"     disjoint: false) ~> split1@(visa, mastercard, amex)",
+				"split1@amex derive(payment = ERROR_FUNCTION('')) ~> derivedColumn"
 			]
 		}
 	}
