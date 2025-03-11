@@ -90,7 +90,13 @@
 										"inputs": [
 											{
 												"referenceName": "param_source_csv",
-												"type": "DatasetReference"
+												"type": "DatasetReference",
+												"parameters": {
+													"p_file_name": {
+														"value": "@item().name",
+														"type": "Expression"
+													}
+												}
 											}
 										]
 									}
