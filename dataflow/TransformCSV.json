@@ -53,7 +53,7 @@
 				"selectCols filter(customer_id != 12) ~> filterRows",
 				"filterRows split(payment == 'visa',",
 				"     payment == 'mastercard',",
-				"     disjoint: false) ~> split1@(visa, mastercard, otherThanVisa)"
+				"     disjoint: false) ~> split1@(visa, mastercard, amex)"
 			]
 		}
 	}
