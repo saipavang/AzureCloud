@@ -25,6 +25,9 @@
 				},
 				{
 					"name": "derivedColumn"
+				},
+				{
+					"name": "aggregate1"
 				}
 			],
 			"scriptLines": [
@@ -57,7 +60,8 @@
 				"filterRows split(payment == 'visa',",
 				"     payment == 'mastercard',",
 				"     disjoint: false) ~> split1@(visa, mastercard, amex)",
-				"split1@amex derive(payment = ERROR_FUNCTION('')) ~> derivedColumn"
+				"split1@amex derive(payment = coalesce(payment,'N/A')) ~> derivedColumn",
+				"split1@visa aggregate() ~> aggregate1"
 			]
 		}
 	}
