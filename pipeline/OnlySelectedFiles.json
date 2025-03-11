@@ -54,7 +54,13 @@
 							"name": "IfFileMatches",
 							"type": "IfCondition",
 							"dependsOn": [],
-							"userProperties": []
+							"userProperties": [],
+							"typeProperties": {
+								"expression": {
+									"value": "@startswith(item().name,'Fact')",
+									"type": "Expression"
+								}
+							}
 						}
 					]
 				}
