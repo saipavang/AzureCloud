@@ -47,7 +47,13 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "var_files",
+					"value": [
+						""
+					]
+				}
 			}
 		],
 		"variables": {
